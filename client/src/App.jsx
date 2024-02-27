@@ -11,7 +11,7 @@ import Header from './components/Header';
 export default function App() {
   return (
     <BrowserRouter>
-    <Header />
+    <Header />s
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/sign-in' element={<SignIn />} />
