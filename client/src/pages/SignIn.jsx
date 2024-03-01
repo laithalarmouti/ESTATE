@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { signInStart, signInFailure, signInSuccesss } from '../redux/user/userSlice'
+import { signInStart, signInFailure, signInSuccess } from '../redux/user/userSlice'
 import OAuth from '../components/OAuth'
 
 export default function SignIn() {
@@ -36,7 +36,7 @@ export default function SignIn() {
         dispatch(signInFailure(data.message))
         return;
       }
-      dispatch(signInSuccesss(data))
+      dispatch(signInSuccess(data))
       navigate('/')
     } catch (error) {
       dispatch(signInFailure(error.message));
