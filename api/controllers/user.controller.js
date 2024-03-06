@@ -27,6 +27,6 @@ export const updateUserInfo = async (req, res, next) => {
         const {password, ...rest} = updatedUser._doc;
         res.status(200).json(rest)
     } catch (error) {
-        next(error)
+        next(errorHandler(401,'The Email or Username is already in use'))
     }
 }
